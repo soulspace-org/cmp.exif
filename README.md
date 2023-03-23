@@ -2,11 +2,12 @@ cmp.exif
 ========
 The cmp.exif is a library for reading EXIF tags on images. It is a Clojure wrapper for [metadata-extractor](https://github.com/drewnoakes/metadata-extractor).
 In contrast to [exif-processor](https://github.com/joshuamiller/exif-processor), cmp.exif returns the directories with the tags and does not filter the entries.
+Feel free to use clojure for filtering. ;-)
 
 
 Copyright
 ---------
-© 2017-2020 Ludger Solbach
+© 2017-2023 Ludger Solbach
 
 Usage
 -----
@@ -20,7 +21,7 @@ Usage
 (ns exif-example
   (:require [org.soulspace.cmp.exif :as exif]))
   
-  (def image-file "example.jpg") ; NOTE: use a path to your image
+  (def image-file "example-photo.jpg") ; NOTE: use a path to your photo
 
   ;; parse the metadata into a map of maps of the shape {dir-name {tag-name tag-value}}
   (exif/parse-metadata (exif/read-metadata image-file))
@@ -35,4 +36,4 @@ License
 
 Code Repository
 ---------------
-[CljComponents on GitHub](https://github.com/soulspace-org/cmp.exif)
+[cmp.exif on GitHub](https://github.com/soulspace-org/cmp.exif)
